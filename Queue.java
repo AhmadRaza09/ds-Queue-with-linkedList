@@ -47,4 +47,20 @@ public class Queue {
 
         return value;
     }
+
+    /**
+     * This method will give the element from the queue
+     *
+     * @return integer
+     * @throws throws exception if queue is empty
+     */
+    public int front() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Queue is Empty");
+        }
+        singlyLinkedList.tail();
+
+        int value = singlyLinkedList.get();
+        return value;
+    }
 }

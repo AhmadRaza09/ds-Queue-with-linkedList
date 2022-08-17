@@ -25,16 +25,20 @@ public class Main {
 
         result = queue.dequeue();
         System.out.println(result);
-        result = queue.dequeue();
+        result = queue.front();
         System.out.println(result);
         result = queue.dequeue();
         System.out.println(result);
         result = queue.dequeue();
         System.out.println(result);
 
+        result = queue.front();
+        System.out.println(result);
+
         result = queue.dequeue();
         System.out.println(result);
-        result = queue.dequeue();
+
+        result = queue.front();
         System.out.println(result);
     }
 }
