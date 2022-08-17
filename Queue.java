@@ -13,4 +13,15 @@ public class Queue {
     public boolean isEmpty() {
         return singlyLinkedList.getSize() == 0;
     }
+
+    /**
+     * This method will add the element in the queue
+     *
+     * @param value
+     */
+    public void enqueue(int value) {
+        singlyLinkedList.start();
+
+        singlyLinkedList.add(value);
+    }
 }
