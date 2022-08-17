@@ -3,6 +3,10 @@ public class Queue {
 
     public Queue() {
         singlyLinkedList = new SinglyLinkedList();
+
+        //add default element because we add further element after that
+        singlyLinkedList.start();
+        singlyLinkedList.add(0);
     }
 
     /**
@@ -11,7 +15,7 @@ public class Queue {
      * @return boolean
      */
     public boolean isEmpty() {
-        return singlyLinkedList.getSize() == 0;
+        return singlyLinkedList.getSize() == 1;
     }
 
     /**
@@ -23,5 +27,24 @@ public class Queue {
         singlyLinkedList.start();
 
         singlyLinkedList.add(value);
+    }
+
+    /**
+     * This method will give the element from the queue and remove it
+     *
+     * @return integer
+     * @throws throws exception if queue is empty
+     */
+    public int dequeue() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Queue is Empty");
+        }
+        singlyLinkedList.tail();
+
+        int value = singlyLinkedList.get();
+
+        singlyLinkedList.remove();
+
+        return value;
     }
 }
