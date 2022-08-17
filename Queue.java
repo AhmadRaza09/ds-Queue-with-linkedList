@@ -63,4 +63,15 @@ public class Queue {
         int value = singlyLinkedList.get();
         return value;
     }
+
+    /**
+     * This method will clear all the queue (remove its all element)
+     */
+    public void clear() {
+        singlyLinkedList.clear();
+
+        //add default element because we add further element after that
+        singlyLinkedList.start();
+        singlyLinkedList.add(0);
+    }
 }
